@@ -51,7 +51,7 @@ mod SNRC-20 {
         }
 
         fn transfer(
-            ref self: ContractState, tick: felt252, recipient: ContractAddress, amount: u128
+            ref self: ContractState, transfer_hash: felt252, recipient: ContractAddress, amount: u128
         ) {
             let sender = get_caller_address();
             assert(sender != recipient, 'Self transfer');
